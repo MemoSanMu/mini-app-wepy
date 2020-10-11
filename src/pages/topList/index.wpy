@@ -1,0 +1,59 @@
+<style lang="less">
+  
+</style>
+<wxs module="m1" lang="babel">
+const getTime = (time) => {
+  let date = getDate(time);
+  let hour = date.getHours();
+  let mins = date.getMinutes();
+  let sec = date.getSeconds();
+  let milli = date.getMilliseconds();
+  return `${hour}:${mins}:${sec}.${milli}`;
+}
+module.exports.getTime = getTime;
+</wxs>
+<template>
+  <div class="top-list-wrapper">
+      this is top list page
+  </div>
+</template>
+
+<script>
+  import wepy from '@wepy/core'
+  import eventHub from '../../common/eventHub';
+  import { mapState } from '@wepy/redux';
+  import store from '../../store';
+
+  wepy.page({
+    store,
+    config: {
+      navigationBarTitleText: 'test'
+    },
+
+    hooks: {
+    },
+
+ 
+
+    mixins: [],
+
+    data: {
+      
+         
+    },
+
+    computed: {
+      ...mapState([ 'counter' ]),
+    },
+
+    methods: {
+    }
+  });
+</script>
+<config>
+{
+    navigationBarTitleText: 'this is top lsit',
+    usingComponents: {
+    }
+}
+</config>
