@@ -7,6 +7,7 @@
   justify-content: space-between;
   box-sizing: border-box;
 }
+// #1296db 蓝色  #bfbfbf 灰色
 </style>
 
 <script>
@@ -68,17 +69,21 @@ wepy.app({
       navigationBarTextStyle: 'black'
     },
     tabBar: {
-      color: "#7A7E83",
-      selectedColor: "#3cc51f",
+      color: "#bfbfbf",
+      selectedColor: "#1296db",
       borderStyle: "black",
       backgroundColor: "#ffffff",
       list: [
         {
           pagePath: "pages/topList/index",
-          text: "排行列表"
+          text: "排行列表",
+          iconPath: "static/images/tabbar_icon/toplist_icon.png",
+          selectedIconPath: "static/images/tabbar_icon/select_toplist_icon.png",
         }, {
           pagePath: "pages/index",
-          text: "init page"
+          text: "首页",
+          iconPath: "static/images/tabbar_icon/homepage_icon.png",
+          selectedIconPath: "static/images/tabbar_icon/select_homepage_icon.png"
         }
       ]
     }
